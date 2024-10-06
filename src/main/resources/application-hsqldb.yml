@@ -1,0 +1,9 @@
+# HSQL DataBase용
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+    url: jdbc:hsqldb:mem:testdb
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: sa
+    password: password

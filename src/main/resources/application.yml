@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ex-batch
+  profiles:
+    active: h2db

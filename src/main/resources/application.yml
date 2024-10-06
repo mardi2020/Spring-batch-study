@@ -1,5 +1,8 @@
 spring:
+  profiles:
+    active: mysql
   application:
     name: ex-batch
-  profiles:
-    active: h2db
+  batch:
+    jdbc:
+      initialize-schema: always

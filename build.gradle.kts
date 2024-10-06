@@ -32,9 +32,12 @@ dependencies {
     // h2 db
     implementation("com.h2database:h2:2.2.224")
     // hsql db
-    implementation("org.hsqldb:hsqldb:2.7.2")
+//    implementation("org.hsqldb:hsqldb:2.7.2")
     // derby db
-    implementation("org.apache.derby:derby:10.17.1.0")
+//    implementation("org.apache.derby:derby:10.17.1.0")
+    // mysql db
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    runtimeOnly("com.mysql:mysql-connector-j")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 

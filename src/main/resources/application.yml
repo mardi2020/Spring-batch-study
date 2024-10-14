@@ -5,4 +5,4 @@ spring:
     name: ex-batch
   batch:
     jdbc:
-      initialize-schema: always
+      initialize-schema: never

@@ -32,8 +32,8 @@ public class BasicTaskJobConfiguration {
     @Bean
     public Tasklet timeCheckTask() {
         return TimeCheckTask.builder()
-                .startTime(LocalTime.of(23, 0))
-                .endTime(LocalTime.of(23, 59))
+                .startTime(LocalTime.of(0, 0))
+                .endTime(LocalTime.of(0, 59))
                 .zoneId(ZoneId.of("Asia/Seoul"))
                 .build();
     }

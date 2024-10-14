@@ -31,7 +31,7 @@ public class TimeCheckTask implements Tasklet, InitializingBean {
     @Override
     public RepeatStatus execute(@NonNull StepContribution contribution,
                                 @NonNull ChunkContext chunkContext) throws Exception {
-        log.info("오후 11시 ~ 11시 59분 사이이므로 작업을 수행합니다.");
+        log.info("{} ~ {} 사이이므로 작업을 수행합니다.", startTime, endTime);
         return RepeatStatus.FINISHED;
     }
 

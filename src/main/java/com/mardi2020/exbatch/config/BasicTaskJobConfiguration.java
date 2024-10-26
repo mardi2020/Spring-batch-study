@@ -24,12 +24,12 @@ public class BasicTaskJobConfiguration {
 
     private final PlatformTransactionManager transactionManager;
 
-    @Bean
+//    @Bean
     public Tasklet greetingTasklet() {
         return new GreetingTask();
     }
 
-    @Bean
+//    @Bean
     public Tasklet timeCheckTask() {
         return TimeCheckTask.builder()
                 .startTime(LocalTime.of(0, 0))
@@ -60,26 +60,26 @@ public class BasicTaskJobConfiguration {
      * @return job 빌더로 생성
      */
 //    @Bean
-    public Job myJob(Step myStep, JobRepository jobRepository) {
-        return new JobBuilder("myJob", jobRepository)
-                .incrementer(new RunIdIncrementer())
-                .start(myStep)
-                .build();
-    }
-
-    @Bean
-    public Step timeCheckStep1(JobRepository jobRepository) {
-        return new StepBuilder("timeCheckStep", jobRepository)
-                .tasklet(timeCheckTask(), transactionManager)
-                .build();
-    }
-
-
-    @Bean
-    public Job timeCheckJob(Step timeCheckStep1, JobRepository jobRepository) {
-        return new JobBuilder("timeCheckJob", jobRepository)
-                .incrementer(new RunIdIncrementer())
-                .start(timeCheckStep1)
-                .build();
-    }
+//    public Job myJob(Step myStep, JobRepository jobRepository) {
+//        return new JobBuilder("myJob", jobRepository)
+//                .incrementer(new RunIdIncrementer())
+//                .start(myStep)
+//                .build();
+//    }
+//
+//    @Bean
+//    public Step timeCheckStep1(JobRepository jobRepository) {
+//        return new StepBuilder("timeCheckStep", jobRepository)
+//                .tasklet(timeCheckTask(), transactionManager)
+//                .build();
+//    }
+//
+//
+//    @Bean
+//    public Job timeCheckJob(Step timeCheckStep1, JobRepository jobRepository) {
+//        return new JobBuilder("timeCheckJob", jobRepository)
+//                .incrementer(new RunIdIncrementer())
+//                .start(timeCheckStep1)
+//                .build();
+//    }
 }

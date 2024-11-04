@@ -1,8 +1,9 @@
 spring:
   datasource:
-    hikari:
-      maximum-pool-size: 10
-    url: jdbc:mysql://localhost:3306/testdb
+    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 1234
+  batch:
+    job:
+      name: JDBC_BATCH_WRITER_CHUNK_JOB

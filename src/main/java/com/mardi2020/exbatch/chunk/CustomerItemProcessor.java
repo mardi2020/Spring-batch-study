@@ -1,7 +1,6 @@
 package com.mardi2020.exbatch.chunk;
 
-import com.mardi2020.exbatch.chunk.data.Item;
-import com.mardi2020.exbatch.chunk.data.ItemInfo;
+import com.mardi2020.exbatch.chunk.data.Customer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
@@ -12,16 +11,16 @@ import org.springframework.stereotype.Component;
  * chunk model에서 없어도 되는 옵션
  */
 @Component
-public class CustomItemProcessor implements ItemProcessor<Item, ItemInfo> {
+public class CustomerItemProcessor implements ItemProcessor<Customer, Customer> {
 
     /**
-     *
      * @param item to be processed, never {@code null}.
-     * @return input item을 변환한 객체
+     * @return customer
      * @throws Exception 예외
      */
     @Override
-    public ItemInfo process(@NonNull Item item) throws Exception {
-        return new ItemInfo(item);
+    public Customer process(@NonNull Customer item) throws Exception {
+        // return new ItemInfo(item);
+        return item;
     }
 }

@@ -29,6 +29,9 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.batch:spring-batch-test")
 
+    // jpa
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
     // h2 db
     implementation("com.h2database:h2:2.2.224")
     // hsql db
